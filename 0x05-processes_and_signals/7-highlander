@@ -1,5 +1,10 @@
 #!/usr/bin/env bash
-# This script stops the 4-to_infinity_and_beyond process
-# Requirement: You must use kill
+# Highlander
 
-kill "$(pgrep -f 4-to_infinity_and_beyond)"
+# print I am invincible!!! when receiving a SIGTERM signal
+trap "echo I am invincible!!!" SIGTERM
+
+while true; do
+  echo "To infinity and beyond"
+  sleep 2
+done;
